@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    datasource:
+    url: jdbc:mysql://localhost:3306/evan
+    username: root
+    password: 1234
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  jpa:
+    hibernate:
+      ddl-auto: create
+      #ddl-auto: none
+    properties:
+      hibernate:
+        default_batch_fetch_size: 1000
+        #위에 jpa2 수정한곳
+# show_sql: true
+        format_sql: true
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.type: trace
